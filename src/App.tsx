@@ -3,6 +3,7 @@ import { BadgeDemo } from "./demos/badge"
 import { InputDemo } from "./demos/input"
 import { CardDemo } from "./demos/card"
 import { TerminalDemo } from "./demos/terminal"
+import { MiscDemo } from "./demos/misc"
 
 export function App() {
   return (
@@ -17,6 +18,7 @@ export function App() {
         <InputDemo />
         <CardDemo />
         <TerminalDemo />
+        <MiscDemo />
       </div>
     </main>
   )

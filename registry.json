@@ -147,6 +147,23 @@
       "description": "Terminal window with macOS-style title bar, prompted lines, and blinking cursor.",
       "registryDependencies": ["xr1-theme", "utils"],
       "files": [{ "path": "registry/xr1/ui/terminal.tsx", "type": "registry:ui" }]
+    },
+    {
+      "name": "xr1-kbd",
+      "type": "registry:ui",
+      "title": "Kbd",
+      "description": "Keyboard shortcut badge.",
+      "registryDependencies": ["xr1-theme", "utils"],
+      "files": [{ "path": "registry/xr1/ui/kbd.tsx", "type": "registry:ui" }]
+    },
+    {
+      "name": "xr1-separator",
+      "type": "registry:ui",
+      "title": "Separator",
+      "description": "Hairline horizontal or vertical divider.",
+      "dependencies": ["@radix-ui/react-separator"],
+      "registryDependencies": ["xr1-theme", "utils"],
+      "files": [{ "path": "registry/xr1/ui/separator.tsx", "type": "registry:ui" }]
     }
   ]
 }
