@@ -131,6 +131,14 @@
       "dependencies": ["@radix-ui/react-label"],
       "registryDependencies": ["xr1-theme", "utils"],
       "files": [{ "path": "registry/xr1/ui/label.tsx", "type": "registry:ui" }]
+    },
+    {
+      "name": "xr1-card",
+      "type": "registry:ui",
+      "title": "Card",
+      "description": "TUI panel with optional title-bar, status dot, and footer.",
+      "registryDependencies": ["xr1-theme", "utils"],
+      "files": [{ "path": "registry/xr1/ui/card.tsx", "type": "registry:ui" }]
     }
   ]
 }
