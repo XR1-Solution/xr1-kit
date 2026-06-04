@@ -4,6 +4,15 @@ import { InputDemo } from "./demos/input"
 import { CardDemo } from "./demos/card"
 import { TerminalDemo } from "./demos/terminal"
 import { MiscDemo } from "./demos/misc"
+import { SwitchDemo } from "./demos/switch"
+import { CheckboxDemo } from "./demos/checkbox"
+import { RadioGroupDemo } from "./demos/radio-group"
+import { TabsDemo } from "./demos/tabs"
+import { TooltipDemo } from "./demos/tooltip"
+import { PopoverDemo } from "./demos/popover"
+import { DropdownMenuDemo } from "./demos/dropdown-menu"
+import { SelectDemo } from "./demos/select"
+import { DialogDemo } from "./demos/dialog"
 
 export function App() {
   return (
@@ -19,6 +28,15 @@ export function App() {
         <CardDemo />
         <TerminalDemo />
         <MiscDemo />
+        <SwitchDemo />
+        <CheckboxDemo />
+        <RadioGroupDemo />
+        <TabsDemo />
+        <TooltipDemo />
+        <PopoverDemo />
+        <DropdownMenuDemo />
+        <SelectDemo />
+        <DialogDemo />
       </div>
     </main>
   )
