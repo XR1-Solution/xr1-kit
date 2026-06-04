@@ -19,6 +19,8 @@ import { BreadcrumbDemo } from "./demos/breadcrumb"
 import { SkeletonDemo } from "./demos/skeleton"
 import { ProgressDemo } from "./demos/progress"
 import { TableDemo } from "./demos/table"
+import { SidebarNavDemo } from "./demos/sidebar-nav"
+import { TerminalCardDemo } from "./demos/terminal-card"
 
 export function App() {
   return (
@@ -49,6 +51,8 @@ export function App() {
         <SkeletonDemo />
         <ProgressDemo />
         <TableDemo />
+        <SidebarNavDemo />
+        <TerminalCardDemo />
       </div>
     </main>
   )

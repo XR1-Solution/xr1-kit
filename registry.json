@@ -296,6 +296,22 @@
       "description": "Semantic table with hairline dividers, pixel-font headers, and hover rows.",
       "registryDependencies": ["xr1-theme", "utils"],
       "files": [{ "path": "registry/xr1/ui/table.tsx", "type": "registry:ui" }]
+    },
+    {
+      "name": "xr1-sidebar-nav",
+      "type": "registry:block",
+      "title": "Sidebar Nav",
+      "description": "Console-style vertical navigation with active green left-border, count badges, and item selection callback.",
+      "registryDependencies": ["xr1-theme", "utils", "xr1-badge"],
+      "files": [{ "path": "registry/xr1/blocks/sidebar-nav.tsx", "type": "registry:block" }]
+    },
+    {
+      "name": "xr1-terminal-card",
+      "type": "registry:block",
+      "title": "Terminal Card",
+      "description": "Card panel with title-bar (deploy.log, RUNNING status) composing a Terminal with prompted lines and blinking cursor.",
+      "registryDependencies": ["xr1-theme", "utils", "xr1-card", "xr1-terminal"],
+      "files": [{ "path": "registry/xr1/blocks/terminal-card.tsx", "type": "registry:block" }]
     }
   ]
 }
