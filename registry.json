@@ -288,6 +288,14 @@
       "dependencies": ["@radix-ui/react-progress"],
       "registryDependencies": ["xr1-theme", "utils"],
       "files": [{ "path": "registry/xr1/ui/progress.tsx", "type": "registry:ui" }]
+    },
+    {
+      "name": "xr1-table",
+      "type": "registry:ui",
+      "title": "Table",
+      "description": "Semantic table with hairline dividers, pixel-font headers, and hover rows.",
+      "registryDependencies": ["xr1-theme", "utils"],
+      "files": [{ "path": "registry/xr1/ui/table.tsx", "type": "registry:ui" }]
     }
   ]
 }

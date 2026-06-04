@@ -18,6 +18,7 @@ import { AvatarDemo } from "./demos/avatar"
 import { BreadcrumbDemo } from "./demos/breadcrumb"
 import { SkeletonDemo } from "./demos/skeleton"
 import { ProgressDemo } from "./demos/progress"
+import { TableDemo } from "./demos/table"
 
 export function App() {
   return (
@@ -47,6 +48,7 @@ export function App() {
         <BreadcrumbDemo />
         <SkeletonDemo />
         <ProgressDemo />
+        <TableDemo />
       </div>
     </main>
   )
