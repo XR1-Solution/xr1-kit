@@ -1,0 +1,22 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "xr1-select",
+  "type": "registry:ui",
+  "title": "Select",
+  "description": "Dropdown select with check indicator and terminal styling.",
+  "dependencies": [
+    "@radix-ui/react-select",
+    "lucide-react"
+  ],
+  "registryDependencies": [
+    "xr1-theme",
+    "utils"
+  ],
+  "files": [
+    {
+      "path": "registry/xr1/ui/select.tsx",
+      "content": "import * as React from \"react\"\nimport * as SelectPrimitive from \"@radix-ui/react-select\"\nimport { Check, ChevronDown } from \"lucide-react\"\nimport { cn } from \"@/lib/utils\"\n\nfunction Select({ ...props }: React.ComponentProps<typeof SelectPrimitive.Root>) {\n  return <SelectPrimitive.Root {...props} />\n}\n\nfunction SelectTrigger({ className, children, ...props }: React.ComponentProps<typeof SelectPrimitive.Trigger>) {\n  return (\n    <SelectPrimitive.Trigger\n      className={cn(\n        \"flex h-9 w-full items-center justify-between gap-2 rounded-md border border-input bg-bg-inset px-3 font-mono text-sm text-fg-0 outline-none\",\n        \"focus:border-green focus:shadow-[0_0_0_3px_var(--xr1-glow-green)]\",\n        \"data-[placeholder]:text-fg-3\",\n        \"disabled:cursor-not-allowed disabled:opacity-40\",\n        className,\n      )}\n      {...props}\n    >\n      {children}\n      <SelectPrimitive.Icon asChild>\n        <ChevronDown className=\"size-4 text-fg-3 shrink-0\" />\n      </SelectPrimitive.Icon>\n    </SelectPrimitive.Trigger>\n  )\n}\n\nfunction SelectValue({ ...props }: React.ComponentProps<typeof SelectPrimitive.Value>) {\n  return <SelectPrimitive.Value {...props} />\n}\n\nfunction SelectContent({ className, children, position = \"popper\", ...props }: React.ComponentProps<typeof SelectPrimitive.Content>) {\n  return (\n    <SelectPrimitive.Portal>\n      <SelectPrimitive.Content\n        position={position}\n        className={cn(\n          \"z-50 overflow-hidden rounded-md border border-line bg-bg-1 shadow-[0_18px_50px_-16px_rgba(0,0,0,0.85)]\",\n          className,\n        )}\n        {...props}\n      >\n        <SelectPrimitive.Viewport\n          className={cn(\n            \"p-1.5\",\n            \"data-[position=popper]:min-w-[var(--radix-select-trigger-width)]\",\n            \"data-[position=popper]:max-h-[var(--radix-select-content-available-height)]\",\n          )}\n        >\n          {children}\n        </SelectPrimitive.Viewport>\n      </SelectPrimitive.Content>\n    </SelectPrimitive.Portal>\n  )\n}\n\nfunction SelectItem({ className, children, ...props }: React.ComponentProps<typeof SelectPrimitive.Item>) {\n  return (\n    <SelectPrimitive.Item\n      className={cn(\n        \"relative flex cursor-pointer select-none items-center rounded-sm py-2 pl-8 pr-3 font-mono text-sm text-fg-2 outline-none\",\n        \"data-[highlighted]:bg-wash-green data-[highlighted]:text-green\",\n        \"data-[disabled]:opacity-40\",\n        className,\n      )}\n      {...props}\n    >\n      <span className=\"absolute left-2 flex size-3.5 items-center justify-center\">\n        <SelectPrimitive.ItemIndicator>\n          <Check className=\"size-3.5\" />\n        </SelectPrimitive.ItemIndicator>\n      </span>\n      <SelectPrimitive.ItemText>{children}</SelectPrimitive.ItemText>\n    </SelectPrimitive.Item>\n  )\n}\n\nexport { Select, SelectTrigger, SelectValue, SelectContent, SelectItem }\n",
+      "type": "registry:ui"
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "xr1-alert",
+  "type": "registry:ui",
+  "title": "Alert",
+  "description": "Inline alert with info/success/warning/danger variants and colored left border.",
+  "dependencies": [
+    "class-variance-authority"
+  ],
+  "registryDependencies": [
+    "xr1-theme",
+    "utils"
+  ],
+  "files": [
+    {
+      "path": "registry/xr1/ui/alert.tsx",
+      "content": "import * as React from \"react\"\nimport { cva, type VariantProps } from \"class-variance-authority\"\nimport { cn } from \"@/lib/utils\"\n\nconst alertVariants = cva(\n  \"flex gap-3 rounded-md border px-4 py-3 font-mono text-sm\",\n  {\n    variants: {\n      variant: {\n        info: \"border-line border-l-2 border-l-cyan bg-bg-1 text-fg-1\",\n        success: \"border-line border-l-2 border-l-green bg-bg-1 text-fg-1\",\n        warning: \"border-line border-l-2 border-l-amber bg-bg-1 text-fg-1\",\n        danger: \"border-line border-l-2 border-l-red bg-bg-1 text-fg-1\",\n      },\n    },\n    defaultVariants: { variant: \"info\" },\n  },\n)\n\nfunction Alert({\n  className,\n  variant,\n  ...props\n}: React.ComponentProps<\"div\"> & VariantProps<typeof alertVariants>) {\n  return (\n    <div\n      role=\"alert\"\n      className={cn(alertVariants({ variant, className }))}\n      {...props}\n    />\n  )\n}\n\nfunction AlertTitle({ className, ...props }: React.ComponentProps<\"p\">) {\n  return <p className={cn(\"font-semibold text-fg-0\", className)} {...props} />\n}\n\nfunction AlertDescription({ className, ...props }: React.ComponentProps<\"p\">) {\n  return <p className={cn(\"text-fg-2\", className)} {...props} />\n}\n\nexport { Alert, AlertTitle, AlertDescription }\n",
+      "type": "registry:ui"
+    }
+  ]
+}

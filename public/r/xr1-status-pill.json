@@ -1,0 +1,18 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "xr1-status-pill",
+  "type": "registry:ui",
+  "title": "Status Pill",
+  "description": "Rounded pill with a colored status dot (online/building/failed/idle).",
+  "registryDependencies": [
+    "xr1-theme",
+    "utils"
+  ],
+  "files": [
+    {
+      "path": "registry/xr1/ui/status-pill.tsx",
+      "content": "import * as React from \"react\"\nimport { cn } from \"@/lib/utils\"\n\ntype Status = \"online\" | \"building\" | \"failed\" | \"idle\"\nconst DOT: Record<Status, string> = {\n  online: \"bg-green shadow-[0_0_8px_var(--xr1-glow-green)]\",\n  building: \"bg-amber\",\n  failed: \"bg-red\",\n  idle: \"bg-fg-4\",\n}\n\nfunction StatusPill({\n  status = \"online\", className, children, ...props\n}: React.ComponentProps<\"span\"> & { status?: Status }) {\n  return (\n    <span\n      data-status={status}\n      className={cn(\n        \"inline-flex items-center gap-2 rounded-full border border-line bg-bg-2 py-1 pl-2.5 pr-3 font-mono text-xs text-fg-1\",\n        className,\n      )}\n      {...props}\n    >\n      <span className={cn(\"size-[7px] rounded-full\", DOT[status])} />\n      {children}\n    </span>\n  )\n}\n\nexport { StatusPill }\n",
+      "type": "registry:ui"
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "xr1-textarea",
+  "type": "registry:ui",
+  "title": "Textarea",
+  "description": "Terminal-style multiline text area.",
+  "registryDependencies": [
+    "xr1-theme",
+    "utils"
+  ],
+  "files": [
+    {
+      "path": "registry/xr1/ui/textarea.tsx",
+      "content": "import * as React from \"react\"\nimport { cn } from \"@/lib/utils\"\n\nfunction Textarea({ className, ...props }: React.ComponentProps<\"textarea\">) {\n  return (\n    <textarea\n      className={cn(\n        \"peer min-h-20 w-full rounded-md border border-input bg-bg-inset px-3 py-2 font-mono text-sm text-fg-0 outline-none\",\n        \"placeholder:text-fg-3 focus-visible:border-green focus-visible:shadow-[0_0_0_3px_var(--xr1-glow-green)] disabled:opacity-40\",\n        className,\n      )}\n      spellCheck={false}\n      {...props}\n    />\n  )\n}\n\nexport { Textarea }\n",
+      "type": "registry:ui"
+    }
+  ]
+}

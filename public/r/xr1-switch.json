@@ -1,0 +1,21 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "xr1-switch",
+  "type": "registry:ui",
+  "title": "Switch",
+  "description": "TUI toggle switch with green checked state.",
+  "dependencies": [
+    "@radix-ui/react-switch"
+  ],
+  "registryDependencies": [
+    "xr1-theme",
+    "utils"
+  ],
+  "files": [
+    {
+      "path": "registry/xr1/ui/switch.tsx",
+      "content": "import * as React from \"react\"\nimport * as SwitchPrimitive from \"@radix-ui/react-switch\"\nimport { cn } from \"@/lib/utils\"\n\nfunction Switch({ className, ...props }: React.ComponentProps<typeof SwitchPrimitive.Root>) {\n  return (\n    <SwitchPrimitive.Root\n      className={cn(\n        \"peer inline-flex h-5 w-9 shrink-0 cursor-pointer items-center rounded-full border border-line-strong bg-bg-3 transition-all outline-none\",\n        \"focus-visible:shadow-[0_0_0_3px_var(--xr1-glow-green)] disabled:cursor-not-allowed disabled:opacity-40\",\n        \"data-[state=checked]:border-green data-[state=checked]:bg-green-dim\",\n        className,\n      )}\n      {...props}\n    >\n      <SwitchPrimitive.Thumb\n        className={cn(\n          \"pointer-events-none block size-3.5 translate-x-0.5 rounded-full bg-fg-3 transition-transform\",\n          \"data-[state=checked]:translate-x-[18px] data-[state=checked]:bg-[var(--xr1-accent-fg)]\",\n        )}\n      />\n    </SwitchPrimitive.Root>\n  )\n}\n\nexport { Switch }\n",
+      "type": "registry:ui"
+    }
+  ]
+}

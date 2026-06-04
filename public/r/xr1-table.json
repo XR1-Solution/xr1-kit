@@ -1,0 +1,18 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "xr1-table",
+  "type": "registry:ui",
+  "title": "Table",
+  "description": "Semantic table with hairline dividers, pixel-font headers, and hover rows.",
+  "registryDependencies": [
+    "xr1-theme",
+    "utils"
+  ],
+  "files": [
+    {
+      "path": "registry/xr1/ui/table.tsx",
+      "content": "import * as React from \"react\"\nimport { cn } from \"@/lib/utils\"\n\nfunction Table({ className, ...props }: React.ComponentProps<\"table\">) {\n  return (\n    <div className=\"w-full overflow-auto\">\n      <table\n        className={cn(\"w-full caption-bottom border-collapse font-mono text-sm\", className)}\n        {...props}\n      />\n    </div>\n  )\n}\n\nfunction TableHeader({ className, ...props }: React.ComponentProps<\"thead\">) {\n  return <thead className={cn(className)} {...props} />\n}\n\nfunction TableBody({ className, ...props }: React.ComponentProps<\"tbody\">) {\n  return <tbody className={cn(className)} {...props} />\n}\n\nfunction TableRow({ className, ...props }: React.ComponentProps<\"tr\">) {\n  return (\n    <tr\n      className={cn(\n        \"border-b border-line-faint transition-colors hover:bg-bg-2\",\n        className,\n      )}\n      {...props}\n    />\n  )\n}\n\nfunction TableHead({ className, ...props }: React.ComponentProps<\"th\">) {\n  return (\n    <th\n      scope=\"col\"\n      className={cn(\n        \"px-4 py-3 text-left font-pixel text-[10px] uppercase tracking-[0.1em] text-fg-3\",\n        className,\n      )}\n      {...props}\n    />\n  )\n}\n\nfunction TableCell({ className, ...props }: React.ComponentProps<\"td\">) {\n  return (\n    <td\n      className={cn(\"px-4 py-3 text-fg-1\", className)}\n      {...props}\n    />\n  )\n}\n\nfunction TableCaption({ className, ...props }: React.ComponentProps<\"caption\">) {\n  return (\n    <caption\n      className={cn(\"mt-3 text-fg-3 font-mono text-sm\", className)}\n      {...props}\n    />\n  )\n}\n\nexport { Table, TableHeader, TableBody, TableRow, TableHead, TableCell, TableCaption }\n",
+      "type": "registry:ui"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "xr1-checkbox",
+  "type": "registry:ui",
+  "title": "Checkbox",
+  "description": "Square checkbox with green checked state and check icon.",
+  "dependencies": [
+    "@radix-ui/react-checkbox",
+    "lucide-react"
+  ],
+  "registryDependencies": [
+    "xr1-theme",
+    "utils"
+  ],
+  "files": [
+    {
+      "path": "registry/xr1/ui/checkbox.tsx",
+      "content": "import * as React from \"react\"\nimport * as CheckboxPrimitive from \"@radix-ui/react-checkbox\"\nimport { Check } from \"lucide-react\"\nimport { cn } from \"@/lib/utils\"\n\nfunction Checkbox({ className, ...props }: React.ComponentProps<typeof CheckboxPrimitive.Root>) {\n  return (\n    <CheckboxPrimitive.Root\n      className={cn(\n        \"peer size-4 shrink-0 rounded-sm border border-line-strong bg-bg-inset outline-none\",\n        \"focus-visible:shadow-[0_0_0_3px_var(--xr1-glow-green)]\",\n        \"data-[state=checked]:border-green data-[state=checked]:bg-green data-[state=checked]:text-[var(--xr1-accent-fg)]\",\n        \"disabled:opacity-40\",\n        className,\n      )}\n      {...props}\n    >\n      <CheckboxPrimitive.Indicator className=\"flex items-center justify-center text-current\">\n        <Check className=\"size-3\" strokeWidth={3} />\n      </CheckboxPrimitive.Indicator>\n    </CheckboxPrimitive.Root>\n  )\n}\n\nexport { Checkbox }\n",
+      "type": "registry:ui"
+    }
+  ]
+}

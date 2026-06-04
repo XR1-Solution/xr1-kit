@@ -1,0 +1,21 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "xr1-badge",
+  "type": "registry:ui",
+  "title": "Badge",
+  "description": "Square badge with solid/outline/tag (#) variants.",
+  "dependencies": [
+    "class-variance-authority"
+  ],
+  "registryDependencies": [
+    "xr1-theme",
+    "utils"
+  ],
+  "files": [
+    {
+      "path": "registry/xr1/ui/badge.tsx",
+      "content": "import * as React from \"react\"\nimport { cva, type VariantProps } from \"class-variance-authority\"\nimport { cn } from \"@/lib/utils\"\n\nconst badgeVariants = cva(\n  \"inline-flex items-center font-mono text-xs leading-none transition-colors\",\n  {\n    variants: {\n      variant: {\n        solid: \"rounded-sm border border-line bg-bg-2 px-2.5 py-1 text-fg-1\",\n        outline: \"rounded-sm border border-line px-2.5 py-1 text-fg-2\",\n        tag: \"rounded-sm border border-line px-2.5 py-1 text-fg-2 before:content-['#'] before:mr-1 before:text-green-dim\",\n      },\n    },\n    defaultVariants: { variant: \"solid\" },\n  },\n)\n\nfunction Badge({ className, variant, ...props }: React.ComponentProps<\"span\"> & VariantProps<typeof badgeVariants>) {\n  return <span className={cn(badgeVariants({ variant, className }))} {...props} />\n}\n\nexport { Badge, badgeVariants }\n",
+      "type": "registry:ui"
+    }
+  ]
+}

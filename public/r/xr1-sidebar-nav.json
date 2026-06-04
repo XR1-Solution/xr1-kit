@@ -1,0 +1,19 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "xr1-sidebar-nav",
+  "type": "registry:block",
+  "title": "Sidebar Nav",
+  "description": "Console-style vertical navigation with active green left-border, count badges, and item selection callback.",
+  "registryDependencies": [
+    "xr1-theme",
+    "utils",
+    "xr1-badge"
+  ],
+  "files": [
+    {
+      "path": "registry/xr1/blocks/sidebar-nav.tsx",
+      "content": "import * as React from \"react\"\nimport { cn } from \"@/lib/utils\"\nimport { Badge } from \"@/components/ui/badge\"\n\nexport interface SidebarNavItem {\n  id: string\n  label: string\n  icon?: React.ReactNode\n  count?: number\n}\n\ninterface SidebarNavProps {\n  items: SidebarNavItem[]\n  active: string\n  onSelect: (id: string) => void\n  className?: string\n  \"aria-label\"?: string\n}\n\nfunction SidebarNav({ items, active, onSelect, className, \"aria-label\": ariaLabel }: SidebarNavProps) {\n  return (\n    <nav aria-label={ariaLabel ?? \"Sidebar navigation\"} className={cn(\"flex flex-col gap-0.5\", className)}>\n      {items.map((item) => {\n        const isActive = item.id === active\n        return (\n          <button\n            key={item.id}\n            type=\"button\"\n            aria-current={isActive ? \"page\" : undefined}\n            onClick={() => onSelect(item.id)}\n            className={cn(\n              \"flex items-center gap-2.5 rounded-sm border-l-2 border-transparent px-2.5 py-2 font-mono text-sm text-fg-2 transition-colors hover:bg-bg-2 hover:text-fg-1 text-left w-full\",\n              isActive && \"bg-wash-green text-green border-l-green\",\n            )}\n          >\n            <span aria-hidden className={cn(\"w-3 text-center text-xs\", isActive ? \"text-green\" : \"text-transparent\")}>\n              ▸\n            </span>\n            {item.icon && <span className=\"flex-none\">{item.icon}</span>}\n            <span className=\"flex-1\">{item.label}</span>\n            {item.count != null && (\n              <Badge variant=\"solid\" className=\"ml-auto text-xs\">\n                {item.count}\n              </Badge>\n            )}\n          </button>\n        )\n      })}\n    </nav>\n  )\n}\n\nexport { SidebarNav }\n",
+      "type": "registry:block"
+    }
+  ]
+}

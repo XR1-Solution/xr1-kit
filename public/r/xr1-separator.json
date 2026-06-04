@@ -1,0 +1,21 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "xr1-separator",
+  "type": "registry:ui",
+  "title": "Separator",
+  "description": "Hairline horizontal or vertical divider.",
+  "dependencies": [
+    "@radix-ui/react-separator"
+  ],
+  "registryDependencies": [
+    "xr1-theme",
+    "utils"
+  ],
+  "files": [
+    {
+      "path": "registry/xr1/ui/separator.tsx",
+      "content": "import * as React from \"react\"\nimport * as SeparatorPrimitive from \"@radix-ui/react-separator\"\nimport { cn } from \"@/lib/utils\"\n\nfunction Separator({\n  className, orientation = \"horizontal\", decorative = true, ...props\n}: React.ComponentProps<typeof SeparatorPrimitive.Root>) {\n  return (\n    <SeparatorPrimitive.Root\n      decorative={decorative}\n      orientation={orientation}\n      className={cn(\"shrink-0 bg-line\", orientation === \"horizontal\" ? \"h-px w-full\" : \"h-full w-px\", className)}\n      {...props}\n    />\n  )\n}\n\nexport { Separator }\n",
+      "type": "registry:ui"
+    }
+  ]
+}

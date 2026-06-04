@@ -1,0 +1,18 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "xr1-kbd",
+  "type": "registry:ui",
+  "title": "Kbd",
+  "description": "Keyboard shortcut badge.",
+  "registryDependencies": [
+    "xr1-theme",
+    "utils"
+  ],
+  "files": [
+    {
+      "path": "registry/xr1/ui/kbd.tsx",
+      "content": "import * as React from \"react\"\nimport { cn } from \"@/lib/utils\"\n\nfunction Kbd({ className, ...props }: React.ComponentProps<\"kbd\">) {\n  return (\n    <kbd\n      className={cn(\n        \"inline-flex h-5 items-center rounded-sm border border-line-strong bg-bg-2 px-1.5 font-mono text-[11px] text-fg-2\",\n        className,\n      )}\n      {...props}\n    />\n  )\n}\n\nexport { Kbd }\n",
+      "type": "registry:ui"
+    }
+  ]
+}

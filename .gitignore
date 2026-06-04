@@ -2,4 +2,8 @@ node_modules/
 dist/
 *.log
 .DS_Store
-public/r/
+test-results/
+playwright-report/
+
+# public/r/ is the built registry — committed so it is distributable via the
+# repo's raw URL (consumers `shadcn add` from .../public/r/<name>.json).

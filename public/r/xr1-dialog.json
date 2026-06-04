@@ -1,0 +1,22 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "xr1-dialog",
+  "type": "registry:ui",
+  "title": "Dialog",
+  "description": "Modal dialog with overlay, title, description, and close button.",
+  "dependencies": [
+    "@radix-ui/react-dialog",
+    "lucide-react"
+  ],
+  "registryDependencies": [
+    "xr1-theme",
+    "utils"
+  ],
+  "files": [
+    {
+      "path": "registry/xr1/ui/dialog.tsx",
+      "content": "import * as React from \"react\"\nimport * as DialogPrimitive from \"@radix-ui/react-dialog\"\nimport { X } from \"lucide-react\"\nimport { cn } from \"@/lib/utils\"\n\nfunction Dialog({ ...props }: React.ComponentProps<typeof DialogPrimitive.Root>) {\n  return <DialogPrimitive.Root {...props} />\n}\n\nfunction DialogTrigger({ ...props }: React.ComponentProps<typeof DialogPrimitive.Trigger>) {\n  return <DialogPrimitive.Trigger {...props} />\n}\n\nfunction DialogPortal({ ...props }: React.ComponentProps<typeof DialogPrimitive.Portal>) {\n  return <DialogPrimitive.Portal {...props} />\n}\n\nfunction DialogOverlay({ className, ...props }: React.ComponentProps<typeof DialogPrimitive.Overlay>) {\n  return (\n    <DialogPrimitive.Overlay\n      className={cn(\"fixed inset-0 z-50 bg-black/70\", className)}\n      {...props}\n    />\n  )\n}\n\nfunction DialogContent({ className, children, ...props }: React.ComponentProps<typeof DialogPrimitive.Content>) {\n  return (\n    <DialogPortal>\n      <DialogOverlay />\n      <DialogPrimitive.Content\n        className={cn(\n          \"fixed left-1/2 top-1/2 z-50 w-full max-w-md -translate-x-1/2 -translate-y-1/2 rounded-lg border border-line bg-bg-1 p-5 shadow-[0_18px_50px_-16px_rgba(0,0,0,0.85)] outline-none\",\n          className,\n        )}\n        {...props}\n      >\n        {children}\n        <DialogPrimitive.Close className=\"absolute right-3 top-3 rounded-sm text-fg-3 outline-none hover:text-green focus-visible:shadow-[0_0_0_3px_var(--xr1-glow-green)]\">\n          <X className=\"size-4\" />\n          <span className=\"sr-only\">Close</span>\n        </DialogPrimitive.Close>\n      </DialogPrimitive.Content>\n    </DialogPortal>\n  )\n}\n\nfunction DialogHeader({ className, ...props }: React.ComponentProps<\"div\">) {\n  return (\n    <div\n      className={cn(\"flex flex-col gap-1.5 pb-4\", className)}\n      {...props}\n    />\n  )\n}\n\nfunction DialogFooter({ className, ...props }: React.ComponentProps<\"div\">) {\n  return (\n    <div\n      className={cn(\"flex items-center justify-end gap-2 pt-4\", className)}\n      {...props}\n    />\n  )\n}\n\nfunction DialogTitle({ className, ...props }: React.ComponentProps<typeof DialogPrimitive.Title>) {\n  return (\n    <DialogPrimitive.Title\n      className={cn(\"font-display text-xl text-fg-0\", className)}\n      {...props}\n    />\n  )\n}\n\nfunction DialogDescription({ className, ...props }: React.ComponentProps<typeof DialogPrimitive.Description>) {\n  return (\n    <DialogPrimitive.Description\n      className={cn(\"font-mono text-sm text-fg-2\", className)}\n      {...props}\n    />\n  )\n}\n\nfunction DialogClose({ ...props }: React.ComponentProps<typeof DialogPrimitive.Close>) {\n  return <DialogPrimitive.Close {...props} />\n}\n\nexport {\n  Dialog,\n  DialogTrigger,\n  DialogPortal,\n  DialogOverlay,\n  DialogContent,\n  DialogHeader,\n  DialogFooter,\n  DialogTitle,\n  DialogDescription,\n  DialogClose,\n}\n",
+      "type": "registry:ui"
+    }
+  ]
+}

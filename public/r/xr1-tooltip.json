@@ -1,0 +1,21 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "xr1-tooltip",
+  "type": "registry:ui",
+  "title": "Tooltip",
+  "description": "Monospace tooltip with hairline border.",
+  "dependencies": [
+    "@radix-ui/react-tooltip"
+  ],
+  "registryDependencies": [
+    "xr1-theme",
+    "utils"
+  ],
+  "files": [
+    {
+      "path": "registry/xr1/ui/tooltip.tsx",
+      "content": "import * as React from \"react\"\nimport * as TooltipPrimitive from \"@radix-ui/react-tooltip\"\nimport { cn } from \"@/lib/utils\"\n\nfunction TooltipProvider({ delayDuration = 400, ...props }: React.ComponentProps<typeof TooltipPrimitive.Provider>) {\n  return <TooltipPrimitive.Provider delayDuration={delayDuration} {...props} />\n}\n\nfunction Tooltip({ ...props }: React.ComponentProps<typeof TooltipPrimitive.Root>) {\n  return <TooltipPrimitive.Root {...props} />\n}\n\nfunction TooltipTrigger({ ...props }: React.ComponentProps<typeof TooltipPrimitive.Trigger>) {\n  return <TooltipPrimitive.Trigger {...props} />\n}\n\n// Note: entrance animation utilities omitted — no tw-animate-css/animate plugin installed.\nfunction TooltipContent({\n  className,\n  sideOffset = 4,\n  ...props\n}: React.ComponentProps<typeof TooltipPrimitive.Content>) {\n  return (\n    <TooltipPrimitive.Portal>\n      <TooltipPrimitive.Content\n        sideOffset={sideOffset}\n        className={cn(\n          \"z-50 rounded-sm border border-line-strong bg-bg-2 px-2.5 py-1.5 font-mono text-xs text-fg-1 shadow-[0_10px_30px_-12px_rgba(0,0,0,0.7)]\",\n          className,\n        )}\n        {...props}\n      />\n    </TooltipPrimitive.Portal>\n  )\n}\n\nexport { TooltipProvider, Tooltip, TooltipTrigger, TooltipContent }\n",
+      "type": "registry:ui"
+    }
+  ]
+}

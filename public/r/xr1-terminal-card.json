@@ -1,0 +1,20 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "xr1-terminal-card",
+  "type": "registry:block",
+  "title": "Terminal Card",
+  "description": "Card panel with title-bar (deploy.log, RUNNING status) composing a Terminal with prompted lines and blinking cursor.",
+  "registryDependencies": [
+    "xr1-theme",
+    "utils",
+    "xr1-card",
+    "xr1-terminal"
+  ],
+  "files": [
+    {
+      "path": "registry/xr1/blocks/terminal-card.tsx",
+      "content": "import { Card, CardHeader, CardDot, CardTitle, CardStatus, CardContent } from \"@/components/ui/card\"\nimport { Terminal, TerminalLine, TerminalCursor } from \"@/components/ui/terminal\"\n\nfunction TerminalCard({ className }: { className?: string }) {\n  return (\n    <Card className={className}>\n      <CardHeader>\n        <CardDot />\n        <CardTitle>deploy.log</CardTitle>\n        <CardStatus>RUNNING</CardStatus>\n      </CardHeader>\n      <CardContent className=\"p-0\">\n        <Terminal>\n          <TerminalLine prompt>pnpm run deploy --env production</TerminalLine>\n          <TerminalLine className=\"text-fg-3\"># Deploying atlas-core v0.4.2 → production</TerminalLine>\n          <TerminalLine className=\"text-green\">✓ Build complete (3.4s)</TerminalLine>\n          <TerminalLine className=\"text-green\">✓ Assets uploaded (12 files)</TerminalLine>\n          <TerminalLine prompt>\n            <TerminalCursor />\n          </TerminalLine>\n        </Terminal>\n      </CardContent>\n    </Card>\n  )\n}\n\nexport { TerminalCard }\n",
+      "type": "registry:block"
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "xr1-tabs",
+  "type": "registry:ui",
+  "title": "Tabs",
+  "description": "Bottom-border tabs with green active indicator.",
+  "dependencies": [
+    "@radix-ui/react-tabs"
+  ],
+  "registryDependencies": [
+    "xr1-theme",
+    "utils"
+  ],
+  "files": [
+    {
+      "path": "registry/xr1/ui/tabs.tsx",
+      "content": "import * as React from \"react\"\nimport * as TabsPrimitive from \"@radix-ui/react-tabs\"\nimport { cn } from \"@/lib/utils\"\n\nfunction Tabs({ className, ...props }: React.ComponentProps<typeof TabsPrimitive.Root>) {\n  return (\n    <TabsPrimitive.Root\n      className={cn(\"flex flex-col gap-4\", className)}\n      {...props}\n    />\n  )\n}\n\nfunction TabsList({ className, ...props }: React.ComponentProps<typeof TabsPrimitive.List>) {\n  return (\n    <TabsPrimitive.List\n      className={cn(\"flex gap-1 border-b border-line\", className)}\n      {...props}\n    />\n  )\n}\n\nfunction TabsTrigger({ className, ...props }: React.ComponentProps<typeof TabsPrimitive.Trigger>) {\n  return (\n    <TabsPrimitive.Trigger\n      className={cn(\n        \"-mb-px border-b-2 border-transparent px-3.5 py-2.5 font-mono text-sm text-fg-3 outline-none transition-colors hover:text-fg-1 focus-visible:shadow-[0_0_0_3px_var(--xr1-glow-green)]\",\n        \"data-[state=active]:border-green data-[state=active]:text-green\",\n        className,\n      )}\n      {...props}\n    />\n  )\n}\n\nfunction TabsContent({ className, ...props }: React.ComponentProps<typeof TabsPrimitive.Content>) {\n  return (\n    <TabsPrimitive.Content\n      className={cn(\"outline-none\", className)}\n      {...props}\n    />\n  )\n}\n\nexport { Tabs, TabsList, TabsTrigger, TabsContent }\n",
+      "type": "registry:ui"
+    }
+  ]
+}

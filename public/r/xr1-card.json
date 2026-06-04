@@ -1,0 +1,18 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "xr1-card",
+  "type": "registry:ui",
+  "title": "Card",
+  "description": "TUI panel with optional title-bar, status dot, and footer.",
+  "registryDependencies": [
+    "xr1-theme",
+    "utils"
+  ],
+  "files": [
+    {
+      "path": "registry/xr1/ui/card.tsx",
+      "content": "import * as React from \"react\"\nimport { cn } from \"@/lib/utils\"\n\nfunction Card({ className, ...props }: React.ComponentProps<\"div\">) {\n  return <div className={cn(\"overflow-hidden rounded-md border border-line bg-bg-1\", className)} {...props} />\n}\nfunction CardHeader({ className, ...props }: React.ComponentProps<\"div\">) {\n  return (\n    <div\n      className={cn(\"flex items-center gap-2.5 border-b border-line bg-bg-2 px-3.5 py-2.5\", className)}\n      {...props}\n    />\n  )\n}\nfunction CardDot({ className, ...props }: React.ComponentProps<\"span\">) {\n  return <span className={cn(\"size-2 rounded-full bg-green shadow-[0_0_8px_var(--xr1-glow-green)]\", className)} {...props} />\n}\nfunction CardTitle({ className, ...props }: React.ComponentProps<\"span\">) {\n  return <span className={cn(\"flex-1 font-mono text-sm text-fg-1\", className)} {...props} />\n}\nfunction CardStatus({ className, ...props }: React.ComponentProps<\"span\">) {\n  return <span className={cn(\"font-pixel text-[10px] uppercase tracking-[0.08em] text-green\", className)} {...props} />\n}\nfunction CardContent({ className, ...props }: React.ComponentProps<\"div\">) {\n  return <div className={cn(\"p-4\", className)} {...props} />\n}\nfunction CardFooter({ className, ...props }: React.ComponentProps<\"div\">) {\n  return <div className={cn(\"flex items-center gap-2 border-t border-line px-4 py-3\", className)} {...props} />\n}\n\nexport { Card, CardHeader, CardDot, CardTitle, CardStatus, CardContent, CardFooter }\n",
+      "type": "registry:ui"
+    }
+  ]
+}

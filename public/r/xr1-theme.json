@@ -1,0 +1,112 @@
+{
+  "name": "xr1-theme",
+  "type": "registry:theme",
+  "title": "XR1 Theme",
+  "description": "XR1 Solution design tokens, fonts, base styles and the terminal cursor keyframes.",
+  "cssVars": {
+    "theme": {
+      "font-display": "'Pixelify Sans', ui-sans-serif, system-ui, sans-serif",
+      "font-mono": "'JetBrains Mono', ui-monospace, 'SF Mono', Menlo, Consolas, monospace",
+      "font-pixel": "'Silkscreen', 'JetBrains Mono', monospace",
+      "radius-sm": "2px",
+      "radius-md": "4px",
+      "radius-lg": "8px",
+      "color-bg-0": "#0a0c0d",
+      "color-bg-1": "#0f1213",
+      "color-bg-2": "#161a1b",
+      "color-bg-3": "#1e2324",
+      "color-bg-inset": "#070809",
+      "color-line-faint": "#161b1c",
+      "color-line": "#242b2c",
+      "color-line-strong": "#36403f",
+      "color-fg-0": "#f2f7f6",
+      "color-fg-1": "#d7dfdd",
+      "color-fg-2": "#93a09e",
+      "color-fg-3": "#5c6665",
+      "color-fg-4": "#3a4242",
+      "color-green": "#6ee7a0",
+      "color-green-dim": "#3fa56c",
+      "color-green-bright": "#a6f4c5",
+      "color-amber": "#f4be5a",
+      "color-cyan": "#5fc9e8",
+      "color-blue": "#7c9cf5",
+      "color-magenta": "#e58fc6",
+      "color-red": "#f2706e",
+      "color-red-dim": "#9e3d3c",
+      "color-wash-green": "rgba(110,231,160,0.08)"
+    },
+    "light": {
+      "background": "#0a0c0d",
+      "foreground": "#d7dfdd",
+      "card": "#0f1213",
+      "card-foreground": "#d7dfdd",
+      "popover": "#161a1b",
+      "popover-foreground": "#d7dfdd",
+      "primary": "#6ee7a0",
+      "primary-foreground": "#04130a",
+      "secondary": "#161a1b",
+      "secondary-foreground": "#d7dfdd",
+      "muted": "#161a1b",
+      "muted-foreground": "#5c6665",
+      "accent": "#1e2324",
+      "accent-foreground": "#f2f7f6",
+      "destructive": "#f2706e",
+      "destructive-foreground": "#04130a",
+      "border": "#242b2c",
+      "input": "#242b2c",
+      "ring": "#6ee7a0",
+      "radius": "0.25rem"
+    },
+    "dark": {
+      "background": "#0a0c0d",
+      "foreground": "#d7dfdd",
+      "card": "#0f1213",
+      "card-foreground": "#d7dfdd",
+      "popover": "#161a1b",
+      "popover-foreground": "#d7dfdd",
+      "primary": "#6ee7a0",
+      "primary-foreground": "#04130a",
+      "secondary": "#161a1b",
+      "secondary-foreground": "#d7dfdd",
+      "muted": "#161a1b",
+      "muted-foreground": "#5c6665",
+      "accent": "#1e2324",
+      "accent-foreground": "#f2f7f6",
+      "destructive": "#f2706e",
+      "destructive-foreground": "#04130a",
+      "border": "#242b2c",
+      "input": "#242b2c",
+      "ring": "#6ee7a0",
+      "radius": "0.25rem"
+    }
+  },
+  "css": {
+    "@import url('https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&family=Silkscreen:wght@400;700&family=JetBrains+Mono:ital,wght@0,400..700;1,400..700&display=swap')": {},
+    "::selection": {
+      "background-color": "var(--primary)",
+      "color": "var(--primary-foreground)"
+    },
+    "@keyframes xr1-blink": {
+      "50%": {
+        "opacity": "0"
+      }
+    },
+    "@utility xr1-cursor": {
+      "display": "inline-block",
+      "color": "var(--primary)",
+      "animation": "xr1-blink 1s steps(1, end) infinite"
+    },
+    "@utility xr1-scanlines": {
+      "background-image": "repeating-linear-gradient(to bottom, transparent 0, transparent 3px, rgba(255,255,255,0.015) 3px, rgba(255,255,255,0.015) 4px)"
+    },
+    "@utility xr1-glow": {
+      "box-shadow": "0 0 24px rgba(110,231,160,0.22)"
+    },
+    "@media (prefers-reduced-motion: reduce)": {
+      ".xr1-cursor": {
+        "animation": "none"
+      }
+    }
+  },
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json"
+}

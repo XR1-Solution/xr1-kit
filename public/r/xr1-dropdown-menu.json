@@ -1,0 +1,21 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "xr1-dropdown-menu",
+  "type": "registry:ui",
+  "title": "Dropdown Menu",
+  "description": "Context/action menu with green highlighted items.",
+  "dependencies": [
+    "@radix-ui/react-dropdown-menu"
+  ],
+  "registryDependencies": [
+    "xr1-theme",
+    "utils"
+  ],
+  "files": [
+    {
+      "path": "registry/xr1/ui/dropdown-menu.tsx",
+      "content": "import * as React from \"react\"\nimport * as DropdownMenuPrimitive from \"@radix-ui/react-dropdown-menu\"\nimport { cn } from \"@/lib/utils\"\n\nfunction DropdownMenu({ ...props }: React.ComponentProps<typeof DropdownMenuPrimitive.Root>) {\n  return <DropdownMenuPrimitive.Root {...props} />\n}\n\nfunction DropdownMenuTrigger({ ...props }: React.ComponentProps<typeof DropdownMenuPrimitive.Trigger>) {\n  return <DropdownMenuPrimitive.Trigger {...props} />\n}\n\nfunction DropdownMenuContent({\n  className,\n  sideOffset = 4,\n  ...props\n}: React.ComponentProps<typeof DropdownMenuPrimitive.Content>) {\n  return (\n    <DropdownMenuPrimitive.Portal>\n      <DropdownMenuPrimitive.Content\n        sideOffset={sideOffset}\n        className={cn(\n          \"z-50 min-w-44 overflow-hidden rounded-md border border-line bg-bg-1 p-1.5 shadow-[0_18px_50px_-16px_rgba(0,0,0,0.85)]\",\n          className,\n        )}\n        {...props}\n      />\n    </DropdownMenuPrimitive.Portal>\n  )\n}\n\nfunction DropdownMenuItem({ className, ...props }: React.ComponentProps<typeof DropdownMenuPrimitive.Item>) {\n  return (\n    <DropdownMenuPrimitive.Item\n      className={cn(\n        \"flex cursor-pointer select-none items-center gap-2 rounded-sm px-2.5 py-2 font-mono text-sm text-fg-2 outline-none\",\n        \"data-[highlighted]:bg-wash-green data-[highlighted]:text-green\",\n        className,\n      )}\n      {...props}\n    />\n  )\n}\n\nfunction DropdownMenuSeparator({ className, ...props }: React.ComponentProps<typeof DropdownMenuPrimitive.Separator>) {\n  return (\n    <DropdownMenuPrimitive.Separator\n      className={cn(\"-mx-1.5 my-1 h-px bg-line\", className)}\n      {...props}\n    />\n  )\n}\n\nfunction DropdownMenuLabel({ className, ...props }: React.ComponentProps<typeof DropdownMenuPrimitive.Label>) {\n  return (\n    <DropdownMenuPrimitive.Label\n      className={cn(\"px-2.5 py-1.5 font-pixel text-[10px] uppercase tracking-[0.12em] text-fg-4\", className)}\n      {...props}\n    />\n  )\n}\n\nexport {\n  DropdownMenu,\n  DropdownMenuTrigger,\n  DropdownMenuContent,\n  DropdownMenuItem,\n  DropdownMenuSeparator,\n  DropdownMenuLabel,\n}\n",
+      "type": "registry:ui"
+    }
+  ]
+}

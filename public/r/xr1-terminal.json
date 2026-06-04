@@ -1,0 +1,18 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "xr1-terminal",
+  "type": "registry:ui",
+  "title": "Terminal",
+  "description": "Terminal window with macOS-style title bar, prompted lines, and blinking cursor.",
+  "registryDependencies": [
+    "xr1-theme",
+    "utils"
+  ],
+  "files": [
+    {
+      "path": "registry/xr1/ui/terminal.tsx",
+      "content": "import * as React from \"react\"\nimport { cn } from \"@/lib/utils\"\n\nfunction Terminal({ title, className, children, ...props }: React.ComponentProps<\"div\"> & { title?: string }) {\n  return (\n    <div\n      className={cn(\"overflow-hidden rounded-lg border border-line bg-bg-inset shadow-[0_10px_30px_-12px_rgba(0,0,0,0.7)]\", className)}\n      {...props}\n    >\n      <div className=\"flex items-center gap-2 border-b border-line bg-bg-2 px-3 py-2.5\">\n        <span aria-hidden className=\"size-[11px] rounded-full bg-red\" />\n        <span aria-hidden className=\"size-[11px] rounded-full bg-amber\" />\n        <span aria-hidden className=\"size-[11px] rounded-full bg-green\" />\n        {title && <span className=\"ml-2 font-mono text-[11px] text-fg-3\">{title}</span>}\n      </div>\n      <pre className=\"m-0 whitespace-pre-wrap p-3.5 font-mono text-sm leading-[1.7] text-fg-1\">{children}</pre>\n    </div>\n  )\n}\n\nfunction TerminalLine({ prompt = false, className, children, ...props }: React.ComponentProps<\"span\"> & { prompt?: boolean }) {\n  return (\n    <span className={cn(\"block\", className)} {...props}>\n      {prompt && <span className=\"text-green\">xr1 ❯ </span>}\n      {children}\n    </span>\n  )\n}\n\nfunction TerminalCursor() {\n  return <span className=\"xr1-cursor\" aria-hidden>█</span>\n}\n\nexport { Terminal, TerminalLine, TerminalCursor }\n",
+      "type": "registry:ui"
+    }
+  ]
+}

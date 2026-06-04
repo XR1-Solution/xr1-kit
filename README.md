@@ -18,12 +18,14 @@ Registry items are installable via `npx shadcn add @xr1/<name>` into any Vite + 
 
 ### 1. Register the `@xr1` namespace
 
-In your `components.json`, add the registry under `"registries"`:
+In your `components.json`, add the registry under `"registries"`. The built JSON
+lives at `public/r/` in this repo, so it can be consumed directly from the repo's
+raw URL (no separate host needed):
 
 ```json
 {
   "registries": {
-    "@xr1": "https://<your-host>/r/{name}.json"
+    "@xr1": "https://raw.githubusercontent.com/XR1-Solution/xr1-kit/main/public/r/{name}.json"
   }
 }
 ```
@@ -139,7 +141,7 @@ All 28 registry items:
 | `xr1-button` | ui | Terminal button — primary / ghost / secondary / danger / link |
 | `xr1-badge` | ui | Square badge — solid / outline / tag (`#`) |
 | `xr1-status-pill` | ui | Rounded pill with colored status dot (online / building / failed / idle) |
-| `xr1-input` | ui | Terminal field with optional prompt (`xr1 >`) prefix |
+| `xr1-input` | ui | Terminal field with optional prompt (`xr1 ❯`) prefix |
 | `xr1-textarea` | ui | Mono textarea with green focus ring |
 | `xr1-label` | ui | Uppercase pixel-style field label |
 | `xr1-card` | ui | Panel with optional title-bar, status dot, and footer |
@@ -179,7 +181,7 @@ pnpm registry:build # Build registry JSON to public/r/ (shadcn build + custom sc
 
 ### Registry build output
 
-`pnpm registry:build` emits one JSON file per registry item into `public/r/` (e.g. `public/r/xr1-button.json`). The dev server serves this directory statically. The `public/r/` directory is gitignored — it is rebuilt on demand.
+`pnpm registry:build` emits one JSON file per registry item into `public/r/` (e.g. `public/r/xr1-button.json`). The dev server serves this directory statically. `public/r/` is **committed** so the registry is installable straight from the repo's raw URL (see [Installation](#installation)); rebuild and commit it whenever a component or token changes.
 
 ---
 

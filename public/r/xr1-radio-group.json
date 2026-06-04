@@ -1,0 +1,21 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "xr1-radio-group",
+  "type": "registry:ui",
+  "title": "Radio Group",
+  "description": "Radio group with green glowing dot indicator.",
+  "dependencies": [
+    "@radix-ui/react-radio-group"
+  ],
+  "registryDependencies": [
+    "xr1-theme",
+    "utils"
+  ],
+  "files": [
+    {
+      "path": "registry/xr1/ui/radio-group.tsx",
+      "content": "import * as React from \"react\"\nimport * as RadioGroupPrimitive from \"@radix-ui/react-radio-group\"\nimport { cn } from \"@/lib/utils\"\n\nfunction RadioGroup({ className, ...props }: React.ComponentProps<typeof RadioGroupPrimitive.Root>) {\n  return (\n    <RadioGroupPrimitive.Root\n      className={cn(\"grid gap-2\", className)}\n      {...props}\n    />\n  )\n}\n\nfunction RadioGroupItem({ className, ...props }: React.ComponentProps<typeof RadioGroupPrimitive.Item>) {\n  return (\n    <RadioGroupPrimitive.Item\n      className={cn(\n        \"aspect-square size-4 rounded-full border border-line-strong bg-bg-inset outline-none\",\n        \"focus-visible:shadow-[0_0_0_3px_var(--xr1-glow-green)]\",\n        \"data-[state=checked]:border-green\",\n        \"disabled:opacity-40\",\n        className,\n      )}\n      {...props}\n    >\n      <RadioGroupPrimitive.Indicator className=\"flex items-center justify-center\">\n        <span className=\"block size-2 rounded-full bg-green shadow-[0_0_8px_var(--xr1-glow-green)]\" />\n      </RadioGroupPrimitive.Indicator>\n    </RadioGroupPrimitive.Item>\n  )\n}\n\nexport { RadioGroup, RadioGroupItem }\n",
+      "type": "registry:ui"
+    }
+  ]
+}

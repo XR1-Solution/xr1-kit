@@ -1,0 +1,18 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "xr1-skeleton",
+  "type": "registry:ui",
+  "title": "Skeleton",
+  "description": "Pulsing skeleton placeholder for loading states.",
+  "registryDependencies": [
+    "xr1-theme",
+    "utils"
+  ],
+  "files": [
+    {
+      "path": "registry/xr1/ui/skeleton.tsx",
+      "content": "import * as React from \"react\"\nimport { cn } from \"@/lib/utils\"\n\nfunction Skeleton({ className, ...props }: React.ComponentProps<\"div\">) {\n  return <div className={cn(\"animate-pulse rounded-sm bg-bg-2\", className)} {...props} />\n}\n\nexport { Skeleton }\n",
+      "type": "registry:ui"
+    }
+  ]
+}

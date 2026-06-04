@@ -1,0 +1,18 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "xr1-input",
+  "type": "registry:ui",
+  "title": "Input",
+  "description": "Terminal input field with optional prompt prefix.",
+  "registryDependencies": [
+    "xr1-theme",
+    "utils"
+  ],
+  "files": [
+    {
+      "path": "registry/xr1/ui/input.tsx",
+      "content": "import * as React from \"react\"\nimport { cn } from \"@/lib/utils\"\n\ntype InputProps = React.ComponentProps<\"input\"> & { prompt?: boolean }\n\nfunction Input({ className, prompt = false, ...props }: InputProps) {\n  return (\n    <div\n      className={cn(\n        \"flex items-center gap-2 rounded-md border border-input bg-bg-inset px-3 py-2\",\n        \"focus-within:border-green focus-within:shadow-[0_0_0_3px_var(--xr1-glow-green)]\",\n        className,\n      )}\n    >\n      {prompt && <span className=\"select-none font-mono text-sm text-green\">xr1 ❯</span>}\n      <input\n        className=\"peer min-w-0 flex-1 bg-transparent font-mono text-sm text-fg-0 outline-none placeholder:text-fg-3 disabled:opacity-40\"\n        spellCheck={false}\n        {...props}\n      />\n    </div>\n  )\n}\n\nexport { Input }\n",
+      "type": "registry:ui"
+    }
+  ]
+}
