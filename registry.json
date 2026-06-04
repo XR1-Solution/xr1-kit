@@ -271,6 +271,14 @@
       "description": "Navigation breadcrumb trail with slash separators.",
       "registryDependencies": ["xr1-theme", "utils"],
       "files": [{ "path": "registry/xr1/ui/breadcrumb.tsx", "type": "registry:ui" }]
+    },
+    {
+      "name": "xr1-skeleton",
+      "type": "registry:ui",
+      "title": "Skeleton",
+      "description": "Pulsing skeleton placeholder for loading states.",
+      "registryDependencies": ["xr1-theme", "utils"],
+      "files": [{ "path": "registry/xr1/ui/skeleton.tsx", "type": "registry:ui" }]
     }
   ]
 }

@@ -16,6 +16,7 @@ import { DialogDemo } from "./demos/dialog"
 import { AlertDemo } from "./demos/alert"
 import { AvatarDemo } from "./demos/avatar"
 import { BreadcrumbDemo } from "./demos/breadcrumb"
+import { SkeletonDemo } from "./demos/skeleton"
 
 export function App() {
   return (
@@ -43,6 +44,7 @@ export function App() {
         <AlertDemo />
         <AvatarDemo />
         <BreadcrumbDemo />
+        <SkeletonDemo />
       </div>
     </main>
   )
