@@ -14,6 +14,7 @@ function TooltipTrigger({ ...props }: React.ComponentProps<typeof TooltipPrimiti
   return <TooltipPrimitive.Trigger {...props} />
 }
 
+// Note: entrance animation utilities omitted — no tw-animate-css/animate plugin installed.
 function TooltipContent({
   className,
   sideOffset = 4,

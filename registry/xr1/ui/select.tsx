@@ -14,7 +14,7 @@ function SelectTrigger({ className, children, ...props }: React.ComponentProps<t
         "flex h-9 w-full items-center justify-between gap-2 rounded-md border border-input bg-bg-inset px-3 font-mono text-sm text-fg-0 outline-none",
         "focus:border-green focus:shadow-[0_0_0_3px_var(--xr1-glow-green)]",
         "data-[placeholder]:text-fg-3",
-        "disabled:opacity-40",
+        "disabled:cursor-not-allowed disabled:opacity-40",
         className,
       )}
       {...props}
@@ -42,7 +42,13 @@ function SelectContent({ className, children, position = "popper", ...props }: R
         )}
         {...props}
       >
-        <SelectPrimitive.Viewport className="p-1.5">
+        <SelectPrimitive.Viewport
+          className={cn(
+            "p-1.5",
+            "data-[position=popper]:min-w-[var(--radix-select-trigger-width)]",
+            "data-[position=popper]:max-h-[var(--radix-select-content-available-height)]",
+          )}
+        >
           {children}
         </SelectPrimitive.Viewport>
       </SelectPrimitive.Content>

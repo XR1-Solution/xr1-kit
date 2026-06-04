@@ -36,7 +36,7 @@ function DialogContent({ className, children, ...props }: React.ComponentProps<t
         {...props}
       >
         {children}
-        <DialogPrimitive.Close className="absolute right-3 top-3 text-fg-3 hover:text-green outline-none">
+        <DialogPrimitive.Close className="absolute right-3 top-3 rounded-sm text-fg-3 outline-none hover:text-green focus-visible:shadow-[0_0_0_3px_var(--xr1-glow-green)]">
           <X className="size-4" />
           <span className="sr-only">Close</span>
         </DialogPrimitive.Close>
@@ -81,6 +81,10 @@ function DialogDescription({ className, ...props }: React.ComponentProps<typeof 
   )
 }
 
+function DialogClose({ ...props }: React.ComponentProps<typeof DialogPrimitive.Close>) {
+  return <DialogPrimitive.Close {...props} />
+}
+
 export {
   Dialog,
   DialogTrigger,
@@ -91,4 +95,5 @@ export {
   DialogFooter,
   DialogTitle,
   DialogDescription,
+  DialogClose,
 }
