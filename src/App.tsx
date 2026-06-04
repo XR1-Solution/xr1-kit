@@ -14,6 +14,7 @@ import { DropdownMenuDemo } from "./demos/dropdown-menu"
 import { SelectDemo } from "./demos/select"
 import { DialogDemo } from "./demos/dialog"
 import { AlertDemo } from "./demos/alert"
+import { AvatarDemo } from "./demos/avatar"
 
 export function App() {
   return (
@@ -39,6 +40,7 @@ export function App() {
         <SelectDemo />
         <DialogDemo />
         <AlertDemo />
+        <AvatarDemo />
       </div>
     </main>
   )
