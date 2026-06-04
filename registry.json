@@ -245,6 +245,15 @@
       "dependencies": ["@radix-ui/react-dialog", "lucide-react"],
       "registryDependencies": ["xr1-theme", "utils"],
       "files": [{ "path": "registry/xr1/ui/dialog.tsx", "type": "registry:ui" }]
+    },
+    {
+      "name": "xr1-alert",
+      "type": "registry:ui",
+      "title": "Alert",
+      "description": "Inline alert with info/success/warning/danger variants and colored left border.",
+      "dependencies": ["class-variance-authority"],
+      "registryDependencies": ["xr1-theme", "utils"],
+      "files": [{ "path": "registry/xr1/ui/alert.tsx", "type": "registry:ui" }]
     }
   ]
 }

@@ -13,6 +13,7 @@ import { PopoverDemo } from "./demos/popover"
 import { DropdownMenuDemo } from "./demos/dropdown-menu"
 import { SelectDemo } from "./demos/select"
 import { DialogDemo } from "./demos/dialog"
+import { AlertDemo } from "./demos/alert"
 
 export function App() {
   return (
@@ -37,6 +38,7 @@ export function App() {
         <DropdownMenuDemo />
         <SelectDemo />
         <DialogDemo />
+        <AlertDemo />
       </div>
     </main>
   )
