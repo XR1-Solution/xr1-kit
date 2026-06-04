@@ -5,7 +5,7 @@
   "title": "Skeleton",
   "description": "Pulsing skeleton placeholder for loading states.",
   "registryDependencies": [
-    "xr1-theme",
+    "@xr1/xr1-theme",
     "utils"
   ],
   "files": [

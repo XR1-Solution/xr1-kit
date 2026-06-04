@@ -5,7 +5,7 @@
   "title": "Status Pill",
   "description": "Rounded pill with a colored status dot (online/building/failed/idle).",
   "registryDependencies": [
-    "xr1-theme",
+    "@xr1/xr1-theme",
     "utils"
   ],
   "files": [

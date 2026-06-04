@@ -89,7 +89,7 @@
       "title": "Button",
       "description": "Terminal-style button: primary green, ghost hairline, danger, secondary, link.",
       "dependencies": ["@radix-ui/react-slot", "class-variance-authority"],
-      "registryDependencies": ["xr1-theme", "utils"],
+      "registryDependencies": ["@xr1/xr1-theme", "utils"],
       "files": [{ "path": "registry/xr1/ui/button.tsx", "type": "registry:ui" }]
     },
     {
@@ -98,7 +98,7 @@
       "title": "Badge",
       "description": "Square badge with solid/outline/tag (#) variants.",
       "dependencies": ["class-variance-authority"],
-      "registryDependencies": ["xr1-theme", "utils"],
+      "registryDependencies": ["@xr1/xr1-theme", "utils"],
       "files": [{ "path": "registry/xr1/ui/badge.tsx", "type": "registry:ui" }]
     },
     {
@@ -106,7 +106,7 @@
       "type": "registry:ui",
       "title": "Status Pill",
       "description": "Rounded pill with a colored status dot (online/building/failed/idle).",
-      "registryDependencies": ["xr1-theme", "utils"],
+      "registryDependencies": ["@xr1/xr1-theme", "utils"],
       "files": [{ "path": "registry/xr1/ui/status-pill.tsx", "type": "registry:ui" }]
     },
     {
@@ -114,7 +114,7 @@
       "type": "registry:ui",
       "title": "Input",
       "description": "Terminal input field with optional prompt prefix.",
-      "registryDependencies": ["xr1-theme", "utils"],
+      "registryDependencies": ["@xr1/xr1-theme", "utils"],
       "files": [{ "path": "registry/xr1/ui/input.tsx", "type": "registry:ui" }]
     },
     {
@@ -122,7 +122,7 @@
       "type": "registry:ui",
       "title": "Textarea",
       "description": "Terminal-style multiline text area.",
-      "registryDependencies": ["xr1-theme", "utils"],
+      "registryDependencies": ["@xr1/xr1-theme", "utils"],
       "files": [{ "path": "registry/xr1/ui/textarea.tsx", "type": "registry:ui" }]
     },
     {
@@ -131,7 +131,7 @@
       "title": "Label",
       "description": "Monospace uppercase label for form fields.",
       "dependencies": ["@radix-ui/react-label"],
-      "registryDependencies": ["xr1-theme", "utils"],
+      "registryDependencies": ["@xr1/xr1-theme", "utils"],
       "files": [{ "path": "registry/xr1/ui/label.tsx", "type": "registry:ui" }]
     },
     {
@@ -139,7 +139,7 @@
       "type": "registry:ui",
       "title": "Card",
       "description": "TUI panel with optional title-bar, status dot, and footer.",
-      "registryDependencies": ["xr1-theme", "utils"],
+      "registryDependencies": ["@xr1/xr1-theme", "utils"],
       "files": [{ "path": "registry/xr1/ui/card.tsx", "type": "registry:ui" }]
     },
     {
@@ -147,7 +147,7 @@
       "type": "registry:ui",
       "title": "Terminal",
       "description": "Terminal window with macOS-style title bar, prompted lines, and blinking cursor.",
-      "registryDependencies": ["xr1-theme", "utils"],
+      "registryDependencies": ["@xr1/xr1-theme", "utils"],
       "files": [{ "path": "registry/xr1/ui/terminal.tsx", "type": "registry:ui" }]
     },
     {
@@ -155,7 +155,7 @@
       "type": "registry:ui",
       "title": "Kbd",
       "description": "Keyboard shortcut badge.",
-      "registryDependencies": ["xr1-theme", "utils"],
+      "registryDependencies": ["@xr1/xr1-theme", "utils"],
       "files": [{ "path": "registry/xr1/ui/kbd.tsx", "type": "registry:ui" }]
     },
     {
@@ -164,7 +164,7 @@
       "title": "Separator",
       "description": "Hairline horizontal or vertical divider.",
       "dependencies": ["@radix-ui/react-separator"],
-      "registryDependencies": ["xr1-theme", "utils"],
+      "registryDependencies": ["@xr1/xr1-theme", "utils"],
       "files": [{ "path": "registry/xr1/ui/separator.tsx", "type": "registry:ui" }]
     },
     {
@@ -173,7 +173,7 @@
       "title": "Switch",
       "description": "TUI toggle switch with green checked state.",
       "dependencies": ["@radix-ui/react-switch"],
-      "registryDependencies": ["xr1-theme", "utils"],
+      "registryDependencies": ["@xr1/xr1-theme", "utils"],
       "files": [{ "path": "registry/xr1/ui/switch.tsx", "type": "registry:ui" }]
     },
     {
@@ -182,7 +182,7 @@
       "title": "Checkbox",
       "description": "Square checkbox with green checked state and check icon.",
       "dependencies": ["@radix-ui/react-checkbox", "lucide-react"],
-      "registryDependencies": ["xr1-theme", "utils"],
+      "registryDependencies": ["@xr1/xr1-theme", "utils"],
       "files": [{ "path": "registry/xr1/ui/checkbox.tsx", "type": "registry:ui" }]
     },
     {
@@ -191,7 +191,7 @@
       "title": "Radio Group",
       "description": "Radio group with green glowing dot indicator.",
       "dependencies": ["@radix-ui/react-radio-group"],
-      "registryDependencies": ["xr1-theme", "utils"],
+      "registryDependencies": ["@xr1/xr1-theme", "utils"],
       "files": [{ "path": "registry/xr1/ui/radio-group.tsx", "type": "registry:ui" }]
     },
     {
@@ -200,7 +200,7 @@
       "title": "Tabs",
       "description": "Bottom-border tabs with green active indicator.",
       "dependencies": ["@radix-ui/react-tabs"],
-      "registryDependencies": ["xr1-theme", "utils"],
+      "registryDependencies": ["@xr1/xr1-theme", "utils"],
       "files": [{ "path": "registry/xr1/ui/tabs.tsx", "type": "registry:ui" }]
     },
     {
@@ -209,7 +209,7 @@
       "title": "Tooltip",
       "description": "Monospace tooltip with hairline border.",
       "dependencies": ["@radix-ui/react-tooltip"],
-      "registryDependencies": ["xr1-theme", "utils"],
+      "registryDependencies": ["@xr1/xr1-theme", "utils"],
       "files": [{ "path": "registry/xr1/ui/tooltip.tsx", "type": "registry:ui" }]
     },
     {
@@ -218,7 +218,7 @@
       "title": "Popover",
       "description": "Floating panel for filters and inline forms.",
       "dependencies": ["@radix-ui/react-popover"],
-      "registryDependencies": ["xr1-theme", "utils"],
+      "registryDependencies": ["@xr1/xr1-theme", "utils"],
       "files": [{ "path": "registry/xr1/ui/popover.tsx", "type": "registry:ui" }]
     },
     {
@@ -227,7 +227,7 @@
       "title": "Dropdown Menu",
       "description": "Context/action menu with green highlighted items.",
       "dependencies": ["@radix-ui/react-dropdown-menu"],
-      "registryDependencies": ["xr1-theme", "utils"],
+      "registryDependencies": ["@xr1/xr1-theme", "utils"],
       "files": [{ "path": "registry/xr1/ui/dropdown-menu.tsx", "type": "registry:ui" }]
     },
     {
@@ -236,7 +236,7 @@
       "title": "Select",
       "description": "Dropdown select with check indicator and terminal styling.",
       "dependencies": ["@radix-ui/react-select", "lucide-react"],
-      "registryDependencies": ["xr1-theme", "utils"],
+      "registryDependencies": ["@xr1/xr1-theme", "utils"],
       "files": [{ "path": "registry/xr1/ui/select.tsx", "type": "registry:ui" }]
     },
     {
@@ -245,7 +245,7 @@
       "title": "Dialog",
       "description": "Modal dialog with overlay, title, description, and close button.",
       "dependencies": ["@radix-ui/react-dialog", "lucide-react"],
-      "registryDependencies": ["xr1-theme", "utils"],
+      "registryDependencies": ["@xr1/xr1-theme", "utils"],
       "files": [{ "path": "registry/xr1/ui/dialog.tsx", "type": "registry:ui" }]
     },
     {
@@ -254,7 +254,7 @@
       "title": "Alert",
       "description": "Inline alert with info/success/warning/danger variants and colored left border.",
       "dependencies": ["class-variance-authority"],
-      "registryDependencies": ["xr1-theme", "utils"],
+      "registryDependencies": ["@xr1/xr1-theme", "utils"],
       "files": [{ "path": "registry/xr1/ui/alert.tsx", "type": "registry:ui" }]
     },
     {
@@ -263,7 +263,7 @@
       "title": "Avatar",
       "description": "Square avatar tile with image + monospace fallback initials.",
       "dependencies": ["@radix-ui/react-avatar"],
-      "registryDependencies": ["xr1-theme", "utils"],
+      "registryDependencies": ["@xr1/xr1-theme", "utils"],
       "files": [{ "path": "registry/xr1/ui/avatar.tsx", "type": "registry:ui" }]
     },
     {
@@ -271,7 +271,7 @@
       "type": "registry:ui",
       "title": "Breadcrumb",
       "description": "Navigation breadcrumb trail with slash separators.",
-      "registryDependencies": ["xr1-theme", "utils"],
+      "registryDependencies": ["@xr1/xr1-theme", "utils"],
       "files": [{ "path": "registry/xr1/ui/breadcrumb.tsx", "type": "registry:ui" }]
     },
     {
@@ -279,7 +279,7 @@
       "type": "registry:ui",
       "title": "Skeleton",
       "description": "Pulsing skeleton placeholder for loading states.",
-      "registryDependencies": ["xr1-theme", "utils"],
+      "registryDependencies": ["@xr1/xr1-theme", "utils"],
       "files": [{ "path": "registry/xr1/ui/skeleton.tsx", "type": "registry:ui" }]
     },
     {
@@ -288,7 +288,7 @@
       "title": "Progress",
       "description": "Thin green progress bar with Radix accessibility attributes.",
       "dependencies": ["@radix-ui/react-progress"],
-      "registryDependencies": ["xr1-theme", "utils"],
+      "registryDependencies": ["@xr1/xr1-theme", "utils"],
       "files": [{ "path": "registry/xr1/ui/progress.tsx", "type": "registry:ui" }]
     },
     {
@@ -296,7 +296,7 @@
       "type": "registry:ui",
       "title": "Table",
       "description": "Semantic table with hairline dividers, pixel-font headers, and hover rows.",
-      "registryDependencies": ["xr1-theme", "utils"],
+      "registryDependencies": ["@xr1/xr1-theme", "utils"],
       "files": [{ "path": "registry/xr1/ui/table.tsx", "type": "registry:ui" }]
     },
     {
@@ -304,7 +304,7 @@
       "type": "registry:block",
       "title": "Sidebar Nav",
       "description": "Console-style vertical navigation with active green left-border, count badges, and item selection callback.",
-      "registryDependencies": ["xr1-theme", "utils", "xr1-badge"],
+      "registryDependencies": ["@xr1/xr1-theme", "utils", "@xr1/xr1-badge"],
       "files": [{ "path": "registry/xr1/blocks/sidebar-nav.tsx", "type": "registry:block" }]
     },
     {
@@ -312,7 +312,7 @@
       "type": "registry:block",
       "title": "Terminal Card",
       "description": "Card panel with title-bar (deploy.log, RUNNING status) composing a Terminal with prompted lines and blinking cursor.",
-      "registryDependencies": ["xr1-theme", "utils", "xr1-card", "xr1-terminal"],
+      "registryDependencies": ["@xr1/xr1-theme", "utils", "@xr1/xr1-card", "@xr1/xr1-terminal"],
       "files": [{ "path": "registry/xr1/blocks/terminal-card.tsx", "type": "registry:block" }]
     }
   ]

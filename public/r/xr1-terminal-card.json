@@ -5,10 +5,10 @@
   "title": "Terminal Card",
   "description": "Card panel with title-bar (deploy.log, RUNNING status) composing a Terminal with prompted lines and blinking cursor.",
   "registryDependencies": [
-    "xr1-theme",
+    "@xr1/xr1-theme",
     "utils",
-    "xr1-card",
-    "xr1-terminal"
+    "@xr1/xr1-card",
+    "@xr1/xr1-terminal"
   ],
   "files": [
     {

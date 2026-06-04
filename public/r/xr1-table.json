@@ -5,7 +5,7 @@
   "title": "Table",
   "description": "Semantic table with hairline dividers, pixel-font headers, and hover rows.",
   "registryDependencies": [
-    "xr1-theme",
+    "@xr1/xr1-theme",
     "utils"
   ],
   "files": [

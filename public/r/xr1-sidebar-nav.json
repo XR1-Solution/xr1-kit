@@ -5,9 +5,9 @@
   "title": "Sidebar Nav",
   "description": "Console-style vertical navigation with active green left-border, count badges, and item selection callback.",
   "registryDependencies": [
-    "xr1-theme",
+    "@xr1/xr1-theme",
     "utils",
-    "xr1-badge"
+    "@xr1/xr1-badge"
   ],
   "files": [
     {
