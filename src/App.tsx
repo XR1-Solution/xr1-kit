@@ -1,4 +1,5 @@
 import { ButtonDemo } from "./demos/button"
+import { BadgeDemo } from "./demos/badge"
 
 export function App() {
   return (
@@ -9,6 +10,7 @@ export function App() {
       </header>
       <div className="mx-auto flex max-w-5xl flex-col gap-12 p-6" data-testid="gallery">
         <ButtonDemo />
+        <BadgeDemo />
       </div>
     </main>
   )

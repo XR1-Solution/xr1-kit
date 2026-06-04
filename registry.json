@@ -89,6 +89,23 @@
       "dependencies": ["@radix-ui/react-slot", "class-variance-authority"],
       "registryDependencies": ["xr1-theme", "utils"],
       "files": [{ "path": "registry/xr1/ui/button.tsx", "type": "registry:ui" }]
+    },
+    {
+      "name": "xr1-badge",
+      "type": "registry:ui",
+      "title": "Badge",
+      "description": "Square badge with solid/outline/tag (#) variants.",
+      "dependencies": ["class-variance-authority"],
+      "registryDependencies": ["xr1-theme", "utils"],
+      "files": [{ "path": "registry/xr1/ui/badge.tsx", "type": "registry:ui" }]
+    },
+    {
+      "name": "xr1-status-pill",
+      "type": "registry:ui",
+      "title": "Status Pill",
+      "description": "Rounded pill with a colored status dot (online/building/failed/idle).",
+      "registryDependencies": ["xr1-theme", "utils"],
+      "files": [{ "path": "registry/xr1/ui/status-pill.tsx", "type": "registry:ui" }]
     }
   ]
 }
