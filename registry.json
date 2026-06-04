@@ -67,17 +67,18 @@
       },
       "css": {
         "@import url('https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&family=Silkscreen:wght@400;700&family=JetBrains+Mono:ital,wght@0,400..700;1,400..700&display=swap')": {},
-        "::selection": { "background-color": "var(--color-green)", "color": "#04130a" },
+        "::selection": { "background-color": "var(--primary)", "color": "var(--primary-foreground)" },
         "@keyframes xr1-blink": { "50%": { "opacity": "0" } },
         "@utility xr1-cursor": {
           "display": "inline-block",
-          "color": "var(--color-green)",
+          "color": "var(--primary)",
           "animation": "xr1-blink 1s steps(1, end) infinite"
         },
         "@utility xr1-scanlines": {
           "background-image": "repeating-linear-gradient(to bottom, transparent 0, transparent 3px, rgba(255,255,255,0.015) 3px, rgba(255,255,255,0.015) 4px)"
         },
-        "@utility xr1-glow": { "box-shadow": "0 0 24px rgba(110,231,160,0.22)" }
+        "@utility xr1-glow": { "box-shadow": "0 0 24px rgba(110,231,160,0.22)" },
+        "@media (prefers-reduced-motion: reduce)": { ".xr1-cursor": { "animation": "none" } }
       }
     }
   ]

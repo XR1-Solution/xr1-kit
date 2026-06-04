@@ -6,14 +6,14 @@ import path from "node:path"
 
 const OUT_DIR = "public/r"
 const SCHEMA = "https://ui.shadcn.com/schema/registry-item.json"
-const NAME_RE = /^[a-z0-9][a-z0-9._-]*$/i
+const NAME_RE = /^[a-z0-9][a-z0-9._-]*$/
 
 const registry = JSON.parse(readFileSync("registry.json", "utf8"))
 mkdirSync(OUT_DIR, { recursive: true })
 
 let emitted = 0
 for (const item of registry.items ?? []) {
-  if (item.files) continue // file-based items are emitted by `shadcn build`
+  if (item.files?.length) continue // file-based items are emitted by `shadcn build`
   if (typeof item.name !== "string" || !NAME_RE.test(item.name)) {
     throw new Error(`Invalid registry item name: ${JSON.stringify(item.name)}`)
   }

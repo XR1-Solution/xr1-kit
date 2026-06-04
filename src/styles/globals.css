@@ -1,7 +1,7 @@
 @import "tailwindcss";
 @import url("https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&family=Silkscreen:wght@400;700&family=JetBrains+Mono:ital,wght@0,400..700;1,400..700&display=swap");
 
-@custom-variant dark (&:is(.dark *));
+@custom-variant dark (&:where(.dark, .dark *));
 
 /* XR1 is dark-only: :root and .dark are identical. */
 :root,
@@ -126,8 +126,8 @@
     text-rendering: optimizeLegibility;
   }
   ::selection {
-    background: var(--xr1-green);
-    color: var(--xr1-accent-fg);
+    background: var(--primary);
+    color: var(--primary-foreground);
   }
 }
 
@@ -139,7 +139,7 @@
 
 @utility xr1-cursor {
   display: inline-block;
-  color: var(--xr1-green);
+  color: var(--primary);
   animation: xr1-blink 1s steps(1, end) infinite;
 }
 @utility xr1-scanlines {
