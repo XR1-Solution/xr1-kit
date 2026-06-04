@@ -139,6 +139,14 @@
       "description": "TUI panel with optional title-bar, status dot, and footer.",
       "registryDependencies": ["xr1-theme", "utils"],
       "files": [{ "path": "registry/xr1/ui/card.tsx", "type": "registry:ui" }]
+    },
+    {
+      "name": "xr1-terminal",
+      "type": "registry:ui",
+      "title": "Terminal",
+      "description": "Terminal window with macOS-style title bar, prompted lines, and blinking cursor.",
+      "registryDependencies": ["xr1-theme", "utils"],
+      "files": [{ "path": "registry/xr1/ui/terminal.tsx", "type": "registry:ui" }]
     }
   ]
 }
