@@ -7,7 +7,7 @@
     "dev": "vite",
     "build": "vite build",
     "typecheck": "tsc --noEmit",
-    "registry:build": "shadcn build && node -e \"const r=JSON.parse(require('fs').readFileSync('registry.json','utf8'));const fs=require('fs');fs.mkdirSync('public/r',{recursive:true});for(const item of r.items){if(!item.files){const out={...item,'\\$schema':'https://ui.shadcn.com/schema/registry-item.json'};fs.writeFileSync('public/r/'+item.name+'.json',JSON.stringify(out,null,2));}}\"",
+    "registry:build": "shadcn build && node scripts/build-registry.mjs",
     "test": "vitest run",
     "test:watch": "vitest",
     "test:e2e": "playwright test"
