@@ -50,6 +50,7 @@
           "accent": "#1e2324", "accent-foreground": "#f2f7f6",
           "destructive": "#f2706e", "destructive-foreground": "#04130a",
           "border": "#242b2c", "input": "#242b2c", "ring": "#6ee7a0",
+          "xr1-glow-green": "rgba(110,231,160,0.22)", "xr1-accent-fg": "#04130a",
           "radius": "0.25rem"
         },
         "dark": {
@@ -62,6 +63,7 @@
           "accent": "#1e2324", "accent-foreground": "#f2f7f6",
           "destructive": "#f2706e", "destructive-foreground": "#04130a",
           "border": "#242b2c", "input": "#242b2c", "ring": "#6ee7a0",
+          "xr1-glow-green": "rgba(110,231,160,0.22)", "xr1-accent-fg": "#04130a",
           "radius": "0.25rem"
         }
       },

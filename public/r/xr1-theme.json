@@ -55,6 +55,8 @@
       "border": "#242b2c",
       "input": "#242b2c",
       "ring": "#6ee7a0",
+      "xr1-glow-green": "rgba(110,231,160,0.22)",
+      "xr1-accent-fg": "#04130a",
       "radius": "0.25rem"
     },
     "dark": {
@@ -77,6 +79,8 @@
       "border": "#242b2c",
       "input": "#242b2c",
       "ring": "#6ee7a0",
+      "xr1-glow-green": "rgba(110,231,160,0.22)",
+      "xr1-accent-fg": "#04130a",
       "radius": "0.25rem"
     }
   },
