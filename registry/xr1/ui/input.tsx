@@ -14,7 +14,7 @@ function Input({ className, prompt = false, ...props }: InputProps) {
     >
       {prompt && <span className="select-none font-mono text-sm text-green">xr1 ❯</span>}
       <input
-        className="min-w-0 flex-1 bg-transparent font-mono text-sm text-fg-0 outline-none placeholder:text-fg-3 disabled:opacity-40"
+        className="peer min-w-0 flex-1 bg-transparent font-mono text-sm text-fg-0 outline-none placeholder:text-fg-3 disabled:opacity-40"
         spellCheck={false}
         {...props}
       />

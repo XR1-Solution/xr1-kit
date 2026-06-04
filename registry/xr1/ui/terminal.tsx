@@ -8,9 +8,9 @@ function Terminal({ title, className, children, ...props }: React.ComponentProps
       {...props}
     >
       <div className="flex items-center gap-2 border-b border-line bg-bg-2 px-3 py-2.5">
-        <span className="size-[11px] rounded-full bg-red" />
-        <span className="size-[11px] rounded-full bg-amber" />
-        <span className="size-[11px] rounded-full bg-green" />
+        <span aria-hidden className="size-[11px] rounded-full bg-red" />
+        <span aria-hidden className="size-[11px] rounded-full bg-amber" />
+        <span aria-hidden className="size-[11px] rounded-full bg-green" />
         {title && <span className="ml-2 font-mono text-[11px] text-fg-3">{title}</span>}
       </div>
       <pre className="m-0 whitespace-pre-wrap p-3.5 font-mono text-sm leading-[1.7] text-fg-1">{children}</pre>
