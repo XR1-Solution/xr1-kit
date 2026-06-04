@@ -263,6 +263,14 @@
       "dependencies": ["@radix-ui/react-avatar"],
       "registryDependencies": ["xr1-theme", "utils"],
       "files": [{ "path": "registry/xr1/ui/avatar.tsx", "type": "registry:ui" }]
+    },
+    {
+      "name": "xr1-breadcrumb",
+      "type": "registry:ui",
+      "title": "Breadcrumb",
+      "description": "Navigation breadcrumb trail with slash separators.",
+      "registryDependencies": ["xr1-theme", "utils"],
+      "files": [{ "path": "registry/xr1/ui/breadcrumb.tsx", "type": "registry:ui" }]
     }
   ]
 }

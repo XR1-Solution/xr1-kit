@@ -15,6 +15,7 @@ import { SelectDemo } from "./demos/select"
 import { DialogDemo } from "./demos/dialog"
 import { AlertDemo } from "./demos/alert"
 import { AvatarDemo } from "./demos/avatar"
+import { BreadcrumbDemo } from "./demos/breadcrumb"
 
 export function App() {
   return (
@@ -41,6 +42,7 @@ export function App() {
         <DialogDemo />
         <AlertDemo />
         <AvatarDemo />
+        <BreadcrumbDemo />
       </div>
     </main>
   )
