@@ -80,6 +80,15 @@
         "@utility xr1-glow": { "box-shadow": "0 0 24px rgba(110,231,160,0.22)" },
         "@media (prefers-reduced-motion: reduce)": { ".xr1-cursor": { "animation": "none" } }
       }
+    },
+    {
+      "name": "xr1-button",
+      "type": "registry:ui",
+      "title": "Button",
+      "description": "Terminal-style button: primary green, ghost hairline, danger, secondary, link.",
+      "dependencies": ["@radix-ui/react-slot", "class-variance-authority"],
+      "registryDependencies": ["xr1-theme", "utils"],
+      "files": [{ "path": "registry/xr1/ui/button.tsx", "type": "registry:ui" }]
     }
   ]
 }

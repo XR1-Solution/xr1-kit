@@ -1,3 +1,5 @@
+import { ButtonDemo } from "./demos/button"
+
 export function App() {
   return (
     <main className="min-h-dvh bg-bg-0 text-fg-1 font-mono">
@@ -6,7 +8,7 @@ export function App() {
         <h1 className="font-display text-3xl text-fg-0">component gallery</h1>
       </header>
       <div className="mx-auto flex max-w-5xl flex-col gap-12 p-6" data-testid="gallery">
-        {/* DEMO SECTIONS INSERTED HERE per component task */}
+        <ButtonDemo />
       </div>
     </main>
   )
