@@ -35,6 +35,7 @@ function TableRow({ className, ...props }: React.ComponentProps<"tr">) {
 function TableHead({ className, ...props }: React.ComponentProps<"th">) {
   return (
     <th
+      scope="col"
       className={cn(
         "px-4 py-3 text-left font-pixel text-[10px] uppercase tracking-[0.1em] text-fg-3",
         className,

@@ -7,6 +7,7 @@ function Progress({
   value,
   ...props
 }: React.ComponentProps<typeof ProgressPrimitive.Root>) {
+  const clamped = Math.min(100, Math.max(0, value ?? 0))
   return (
     <ProgressPrimitive.Root
       value={value}
@@ -18,7 +19,7 @@ function Progress({
     >
       <ProgressPrimitive.Indicator
         className="h-full bg-green transition-transform"
-        style={{ transform: `translateX(-${100 - (value ?? 0)}%)` }}
+        style={{ transform: `translateX(-${100 - clamped}%)` }}
       />
     </ProgressPrimitive.Root>
   )

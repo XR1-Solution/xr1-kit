@@ -19,3 +19,9 @@ test("renders with 100 value", () => {
   const bar = screen.getByRole("progressbar")
   expect(bar).toHaveAttribute("aria-valuenow", "100")
 })
+
+test("clamps the indicator transform when value exceeds 100", () => {
+  render(<Progress value={150} />)
+  const indicator = document.querySelector(".bg-green") as HTMLElement
+  expect(indicator.style.transform).toBe("translateX(-0%)")
+})

@@ -51,4 +51,5 @@ test("breadcrumb page has fg-1 class", () => {
     </Breadcrumb>,
   )
   expect(screen.getByText("current").className).toContain("text-fg-1")
+  expect(screen.getByText("current")).toHaveAttribute("aria-current", "page")
 })
