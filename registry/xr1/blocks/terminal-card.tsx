@@ -1,9 +1,9 @@
 import { Card, CardHeader, CardDot, CardTitle, CardStatus, CardContent } from "@/components/ui/card"
 import { Terminal, TerminalLine, TerminalCursor } from "@/components/ui/terminal"
 
-function TerminalCard() {
+function TerminalCard({ className }: { className?: string }) {
   return (
-    <Card>
+    <Card className={className}>
       <CardHeader>
         <CardDot />
         <CardTitle>deploy.log</CardTitle>

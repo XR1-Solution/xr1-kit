@@ -6,4 +6,5 @@ test("renders card title deploy.log and terminal content", () => {
   expect(screen.getByText("deploy.log")).toBeInTheDocument()
   // Terminal renders its children in a <pre>; assert at least one terminal line
   expect(screen.getByText(/Deploying/)).toBeInTheDocument()
+  expect(screen.getByText("RUNNING")).toBeInTheDocument()
 })

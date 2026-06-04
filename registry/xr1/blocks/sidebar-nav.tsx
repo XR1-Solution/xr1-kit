@@ -14,11 +14,12 @@ interface SidebarNavProps {
   active: string
   onSelect: (id: string) => void
   className?: string
+  "aria-label"?: string
 }
 
-function SidebarNav({ items, active, onSelect, className }: SidebarNavProps) {
+function SidebarNav({ items, active, onSelect, className, "aria-label": ariaLabel }: SidebarNavProps) {
   return (
-    <nav className={cn("flex flex-col gap-0.5", className)}>
+    <nav aria-label={ariaLabel ?? "Sidebar navigation"} className={cn("flex flex-col gap-0.5", className)}>
       {items.map((item) => {
         const isActive = item.id === active
         return (
@@ -32,8 +33,8 @@ function SidebarNav({ items, active, onSelect, className }: SidebarNavProps) {
               isActive && "bg-wash-green text-green border-l-green",
             )}
           >
-            <span className={cn("w-3 text-center text-xs", isActive ? "text-green" : "text-transparent select-none")}>
-              {isActive ? "▸" : "▸"}
+            <span aria-hidden className={cn("w-3 text-center text-xs", isActive ? "text-green" : "text-transparent")}>
+              ▸
             </span>
             {item.icon && <span className="flex-none">{item.icon}</span>}
             <span className="flex-1">{item.label}</span>
