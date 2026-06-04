@@ -279,6 +279,15 @@
       "description": "Pulsing skeleton placeholder for loading states.",
       "registryDependencies": ["xr1-theme", "utils"],
       "files": [{ "path": "registry/xr1/ui/skeleton.tsx", "type": "registry:ui" }]
+    },
+    {
+      "name": "xr1-progress",
+      "type": "registry:ui",
+      "title": "Progress",
+      "description": "Thin green progress bar with Radix accessibility attributes.",
+      "dependencies": ["@radix-ui/react-progress"],
+      "registryDependencies": ["xr1-theme", "utils"],
+      "files": [{ "path": "registry/xr1/ui/progress.tsx", "type": "registry:ui" }]
     }
   ]
 }

@@ -17,6 +17,7 @@ import { AlertDemo } from "./demos/alert"
 import { AvatarDemo } from "./demos/avatar"
 import { BreadcrumbDemo } from "./demos/breadcrumb"
 import { SkeletonDemo } from "./demos/skeleton"
+import { ProgressDemo } from "./demos/progress"
 
 export function App() {
   return (
@@ -45,6 +46,7 @@ export function App() {
         <AvatarDemo />
         <BreadcrumbDemo />
         <SkeletonDemo />
+        <ProgressDemo />
       </div>
     </main>
   )
