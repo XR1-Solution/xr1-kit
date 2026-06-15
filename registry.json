@@ -34,6 +34,15 @@
           "green": "#6ee7a0", "green-dim": "#3fa56c", "green-bright": "#a6f4c5",
           "amber": "#f4be5a", "cyan": "#5fc9e8", "blue": "#7c9cf5", "magenta": "#e58fc6", "red": "#f2706e", "red-dim": "#9e3d3c",
           "wash-green": "rgba(110,231,160,0.08)",
+          "surface-well": "var(--bg-inset)", "surface-canvas": "var(--bg-0)", "surface-card": "var(--bg-1)", "surface-raised": "var(--bg-2)", "surface-control": "var(--bg-3)",
+          "border-faint": "var(--line-faint)", "border-default": "var(--line)", "border-strong": "var(--line-strong)", "border-accent": "2px",
+          "text-bright": "var(--fg-0)", "text-body": "var(--fg-1)", "text-secondary": "var(--fg-2)", "text-muted": "var(--fg-3)", "text-dim": "var(--fg-4)",
+          "accent-fg": "var(--xr1-accent-fg)", "accent-hover": "var(--green-bright)", "accent-pressed": "var(--green-dim)",
+          "status-online": "var(--green)", "status-building": "var(--amber)", "status-failed": "var(--red)", "status-idle": "var(--fg-4)",
+          "focus-ring": "var(--xr1-glow-green)", "shadow-pop": "0 10px 30px -12px rgba(0,0,0,0.7)", "shadow-float": "0 18px 50px -16px rgba(0,0,0,0.85)",
+          "ease-out": "cubic-bezier(0.2,0,0,1)", "dur-fast": "100ms", "dur-mid": "160ms", "dur-slow": "240ms",
+          "leading-tight": "1.2", "leading-snug": "1.4", "leading-normal": "1.6", "leading-loose": "1.7",
+          "tracking-tight": "-0.01em", "tracking-wide": "0.02em", "tracking-label": "0.1em", "tracking-caps": "0.14em",
           "radius": "0.25rem"
         },
         "dark": {
@@ -53,6 +62,15 @@
           "green": "#6ee7a0", "green-dim": "#3fa56c", "green-bright": "#a6f4c5",
           "amber": "#f4be5a", "cyan": "#5fc9e8", "blue": "#7c9cf5", "magenta": "#e58fc6", "red": "#f2706e", "red-dim": "#9e3d3c",
           "wash-green": "rgba(110,231,160,0.08)",
+          "surface-well": "var(--bg-inset)", "surface-canvas": "var(--bg-0)", "surface-card": "var(--bg-1)", "surface-raised": "var(--bg-2)", "surface-control": "var(--bg-3)",
+          "border-faint": "var(--line-faint)", "border-default": "var(--line)", "border-strong": "var(--line-strong)", "border-accent": "2px",
+          "text-bright": "var(--fg-0)", "text-body": "var(--fg-1)", "text-secondary": "var(--fg-2)", "text-muted": "var(--fg-3)", "text-dim": "var(--fg-4)",
+          "accent-fg": "var(--xr1-accent-fg)", "accent-hover": "var(--green-bright)", "accent-pressed": "var(--green-dim)",
+          "status-online": "var(--green)", "status-building": "var(--amber)", "status-failed": "var(--red)", "status-idle": "var(--fg-4)",
+          "focus-ring": "var(--xr1-glow-green)", "shadow-pop": "0 10px 30px -12px rgba(0,0,0,0.7)", "shadow-float": "0 18px 50px -16px rgba(0,0,0,0.85)",
+          "ease-out": "cubic-bezier(0.2,0,0,1)", "dur-fast": "100ms", "dur-mid": "160ms", "dur-slow": "240ms",
+          "leading-tight": "1.2", "leading-snug": "1.4", "leading-normal": "1.6", "leading-loose": "1.7",
+          "tracking-tight": "-0.01em", "tracking-wide": "0.02em", "tracking-label": "0.1em", "tracking-caps": "0.14em",
           "radius": "0.25rem"
         }
       },

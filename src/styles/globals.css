@@ -54,6 +54,54 @@
   --xr1-accent-fg: #04130a;
   --xr1-glow-green: rgba(110, 231, 160, 0.22);
   --xr1-wash-green: rgba(110, 231, 160, 0.08);
+
+  /* ---- Braidmux-aligned semantic layer ---------------------------------
+     Roles named by intent; the raw --xr1-* ramps above stay the source. */
+  --surface-well: var(--xr1-bg-inset);
+  --surface-canvas: var(--xr1-bg-0);
+  --surface-card: var(--xr1-bg-1);
+  --surface-raised: var(--xr1-bg-2);
+  --surface-control: var(--xr1-bg-3);
+
+  --border-faint: var(--xr1-line-faint);
+  --border-default: var(--xr1-line);
+  --border-strong: var(--xr1-line-strong);
+  --border-accent: 2px; /* left rule on alerts / active nav */
+
+  --text-bright: var(--xr1-fg-0);
+  --text-body: var(--xr1-fg-1);
+  --text-secondary: var(--xr1-fg-2);
+  --text-muted: var(--xr1-fg-3);
+  --text-dim: var(--xr1-fg-4);
+
+  --accent-fg: var(--xr1-accent-fg);
+  --accent-hover: var(--xr1-green-bright);
+  --accent-pressed: var(--xr1-green-dim);
+
+  --status-online: var(--xr1-green);
+  --status-building: var(--xr1-amber);
+  --status-failed: var(--xr1-red);
+  --status-idle: var(--xr1-fg-4);
+
+  --focus-ring: var(--xr1-glow-green);
+  --shadow-pop: 0 10px 30px -12px rgba(0, 0, 0, 0.7);
+  --shadow-float: 0 18px 50px -16px rgba(0, 0, 0, 0.85);
+
+  /* motion — fast, mechanical, no bounce */
+  --ease-out: cubic-bezier(0.2, 0, 0, 1);
+  --dur-fast: 100ms;
+  --dur-mid: 160ms;
+  --dur-slow: 240ms;
+
+  /* leading / tracking */
+  --leading-tight: 1.2;
+  --leading-snug: 1.4;
+  --leading-normal: 1.6;
+  --leading-loose: 1.7;
+  --tracking-tight: -0.01em;
+  --tracking-wide: 0.02em;
+  --tracking-label: 0.1em;
+  --tracking-caps: 0.14em;
 }
 
 @theme inline {
@@ -102,6 +150,13 @@
   --color-red: var(--xr1-red);
   --color-red-dim: var(--xr1-red-dim);
   --color-wash-green: var(--xr1-wash-green);
+
+  /* semantic surface utilities: bg-surface-card, bg-surface-raised, ... */
+  --color-surface-well: var(--surface-well);
+  --color-surface-canvas: var(--surface-canvas);
+  --color-surface-card: var(--surface-card);
+  --color-surface-raised: var(--surface-raised);
+  --color-surface-control: var(--surface-control);
 
   --font-display: "Pixelify Sans", ui-sans-serif, system-ui, sans-serif;
   --font-mono: "JetBrains Mono", ui-monospace, "SF Mono", Menlo, Consolas, monospace;
